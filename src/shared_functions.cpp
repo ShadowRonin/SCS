@@ -41,7 +41,7 @@ public float toDegrees(float rad)
  *
  * VRM      Date      By    Description
  * ===   ==========   ===   ==========================================================================================================
- * 1xx   xx/xx/2014   BSW   initial coding
+ * 100   05/09/2014   BSW   initial coding
  *************************************************************************************************************************************/
 public float[3] toEuler(Quaternion rotation)
 {
@@ -101,6 +101,23 @@ public float toRads(float degree)
 }
 
 
+/*************************************************************************************************************************************
+ * findAngle
+ *
+
+ * VRM      Date      By    Description
+ * ===   ==========   ===   ==========================================================================================================
+
+ * 100   05/09/2014   BSW   initial coding
+
+ *************************************************************************************************************************************/
+public float[] findAngle(SpaceObject object, Matrix<float> targetPos) {//postion in GFoR
+	float[3] targetPosition = targetPos.array();
+	Matrix<float> vector = new Matrix<float>(object.toLocal(targetPostion[0], object.toLocal(targetPostion[1], object.toLocal(targetPostion[2]);
+	Quaternion angle = new Quaternion();
+	angle.setFromTwoVectors(new Matrix<float>(0,0,0), vector);
+	return toEuler(angle);	
+}
 
 
 
