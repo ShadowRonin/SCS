@@ -39,7 +39,6 @@ typedef Matrix<float, 3, 1> vector3D;
 
 // definitions
 #define MAX_CMD_BUFF 256				// console command input buffer
-#define M_PI 3.14159265358979323846
 
 // enumerations
 enum COORDS								// offset into vector for each coordinate
