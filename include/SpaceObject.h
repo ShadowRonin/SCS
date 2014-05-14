@@ -37,6 +37,7 @@ class SpaceObject
 		// protected data members
 		vector3D objectVelocity;		// current velocity vector of object in 3D space using local FoR
 		// protected method members
+		void applyForce(vector3D);		// adjusts V based on the force given
 	private:
 		// private data members
 		vector3D objectFacing;			// facing (unit vector) of object in 3D using global FoR
@@ -44,12 +45,12 @@ class SpaceObject
 		cords3D objectPosition;			// position of object in 3D space using global FoR
 		float objectMass;				// mass of object
 		// private method members
-		void applyForce(vector3D);		// adjusts V based on the force given
 		void applyTurn();				// applys V(global) to objectPosition
 		vector3D getFacingV();			// get facing vector
 		bearing3D getFacingB();			// get facing stated as degrees off x and y planes
 		bearing3D getHeadingB();		// get heading stated as degrees off x and y planes
 		vector3D getVelocityG();		// get velocity in global FoR
 		vector3D getVelocityL();		// get velocity in local FoR
+		void rotate(float, float, float);	// ?
 };
 

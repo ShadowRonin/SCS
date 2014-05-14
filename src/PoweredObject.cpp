@@ -16,8 +16,8 @@
 #include "PoweredObject.h"
 
 //3rd party files
-using namespace Eigen;
-#include <Eigen/Geometry>
+//using namespace Eigen;
+//#include <Eigen/Geometry>
 
 /*************************************************************************************************************************************
  * constructor
@@ -48,15 +48,15 @@ PoweredObject::~PoweredObject()
  * ===   ==========   ===   ==========================================================================================================
  * 1xx   xx/xx/2014   BSW   initial coding
  *************************************************************************************************************************************/
-void applyThrust(float givenThrust) {
-	if(givenThrust < thrust) {
-		applyForce(Vector3D temp = {givenThrust, 0.0, 0.0};
-		return void;
-	}
-	applyForce(Vector3D temp = {thrust, 0.0, 0.0};	
+void PoweredObject::applyThrust(float givenThrust) {
+//	if(givenThrust < thrust) {
+//		applyForce(Vector3D temp = {givenThrust, 0.0, 0.0};
+//		return void;
+//	}
+//	applyForce(vector3D temp = {thrust, 0.0, 0.0};
 }
-void applyThrust() {
-	applyForce(Vector3D temp = {thrust, 0.0, 0.0};
+void PoweredObject::applyThrust() {
+//	applyForce(vector3D temp = {thrust, 0.0, 0.0};
 }
 
 /*************************************************************************************************************************************

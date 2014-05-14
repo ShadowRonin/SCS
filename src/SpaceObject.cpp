@@ -13,12 +13,12 @@
 // standard header files
 
 // project header files
+//#include "common.h"
 #include "SpaceObject.h"
-#include "common.cpp"
 
 //3rd party librarys
+#include <Geometry>
 using namespace Eigen;
-#include <Eigen/Geometry>
 
 /*************************************************************************************************************************************
  * constructor
@@ -77,8 +77,9 @@ void SpaceObject::setPosition(float _x, float _y, float _z)
  * ===   ==========   ===   ==========================================================================================================
  * 1xx   xx/xx/2014   BSW   initial coding
  *************************************************************************************************************************************/
-void applyForce(vector3D) {
-	objectVelocity = objectVelocity + (vector3D / objectMass);
+void SpaceObject::applyForce(vector3D)
+{
+//	objectVelocity = objectVelocity + (vector3D / objectMass);
 }
 
 /*************************************************************************************************************************************
@@ -88,6 +89,7 @@ void applyForce(vector3D) {
  * ===   ==========   ===   ==========================================================================================================
  * 1xx   xx/xx/2014   BSW   initial coding
  *************************************************************************************************************************************/
-public void rotate(float yaw, float pitch, float roll) {
-	objectRotation = objectRotation * toQuat(yaw, pitch, roll);
+void SpaceObject::rotate(float yaw, float pitch, float roll)
+{
+	//objectRotation = objectRotation * toQuat(yaw, pitch, roll);
 }

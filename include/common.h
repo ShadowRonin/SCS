@@ -25,16 +25,10 @@ using namespace Eigen;
 // project header files
 
 // type definitions
-//typedef struct cords3D {
-//	float x, y, z;
-//	} cords3D;
 typedef Matrix<float, 3, 1> cords3D;
 typedef struct bearing3D {
-	float azimuthAngle, elevationAngle;
+	float yaw, pitch, roll;
 	} bearing3D;
-//typedef struct vector3D {
-//	float x, y, z;
-//	} vector3D;
 typedef Matrix<float, 3, 1> vector3D;
 
 // definitions

@@ -32,8 +32,8 @@
 // variables
 
 // function prototypes
-public float toDegrees(float);
-public float[3] toEuler(Quaternion);
-public Quaternion toQuat(float[3]);		//takes a array of 3 floats. yaw, pitch, and roll in degrees
-public float toRads(float);
-public float[] findAngle(SpaceObject, Matrix<float>);
+float toDegrees(float);
+bearing3D toEuler(Quaternionf);
+Quaternionf toQuat(bearing3D);			//takes a array of 3 floats. yaw, pitch, and roll in degrees
+float toRads(float);
+//float[] findAngle(SpaceObject, Matrix<float>);
