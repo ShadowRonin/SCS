@@ -13,12 +13,9 @@
 // standard header files
 
 // project header files
-//#include "common.h"
 #include "SpaceObject.h"
 
-//3rd party librarys
-#include <Geometry>
-using namespace Eigen;
+//3rd party header files
 
 /*************************************************************************************************************************************
  * constructor
@@ -79,6 +76,7 @@ void SpaceObject::setPosition(float _x, float _y, float _z)
  *************************************************************************************************************************************/
 void SpaceObject::applyForce(vector3D)
 {
+//TODO
 //	objectVelocity = objectVelocity + (vector3D / objectMass);
 }
 
@@ -91,5 +89,6 @@ void SpaceObject::applyForce(vector3D)
  *************************************************************************************************************************************/
 void SpaceObject::rotate(float yaw, float pitch, float roll)
 {
+	//TODO
 	//objectRotation = objectRotation * toQuat(yaw, pitch, roll);
 }

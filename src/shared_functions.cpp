@@ -18,12 +18,8 @@
 #include <math.h>
 
 // 3rd party header files
-#include <Core>
-#include <Geometry>
-using namespace Eigen;
 
 // project header files
-#include "common.h"
 #include "shared_functions.h"
 
 /*************************************************************************************************************************************
@@ -115,6 +111,7 @@ float toRads(float degree)
  * 100   05/09/2014   BSW   initial coding
 
  *************************************************************************************************************************************/
+//TODO
 //float[] findAngle(SpaceObject object, Matrix<float> targetPos)
 //{//postion in GFoR
 //	float[3] targetPosition = targetPos.array();
