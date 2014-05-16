@@ -24,6 +24,7 @@ using namespace Eigen;
 
 // project header files
 #include "common.h"
+#include "SpaceObject.h"
 
 // type definitions
 
@@ -39,5 +40,4 @@ float toDegrees(float);
 bearing3D toEuler(Quaternionf);
 Quaternionf toQuat(bearing3D);			//takes a array of 3 floats. yaw, pitch, and roll in degrees
 float toRads(float);
-//TODO
-//float[] findAngle(SpaceObject, Matrix<float>);
+bearing3D findAngle(SpaceObject, Matrix<float>);
