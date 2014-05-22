@@ -46,6 +46,7 @@ class SpaceObject
 		float objectMass;				// mass of object
 		// private method members
 		void applyTurn();				// applys V(global) to objectPosition
+		bearing3D findTargetBearing(cords3D);  // returns bearing (Euler angles) of target space object
 		vector3D getFacingV();			// get facing vector
 		bearing3D getFacingB();			// get facing stated as degrees off x and y planes
 		bearing3D getHeadingB();		// get heading stated as degrees off x and y planes

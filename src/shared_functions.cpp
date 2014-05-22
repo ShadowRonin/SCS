@@ -101,25 +101,4 @@ float toRads(float degree)
 }
 
 
-/*************************************************************************************************************************************
- * findAngle - returns bearing (Euler angles) of target space object from source object
- *
- * VRM      Date      By    Description
- * ===   ==========   ===   ==========================================================================================================
- * 100   05/09/2014   BSW   initial coding
- *************************************************************************************************************************************/
-bearing3D findAngle(SpaceObject object, Matrix<float> targetPos)
-{
-	coords3D targetPosition = targetPos.getPosition();
-
-	Matrix<float> vector = new Matrix<float>(object.toLocal(targetPostion[0], object.toLocal(targetPostion[1], object.toLocal(targetPostion[2]);
-
-	Quaternion angle = new Quaternion();
-
-	angle.setFromTwoVectors(new Matrix<float>(0,0,0), vector);
-
-	return toEuler(angle);
-}
-
-
 

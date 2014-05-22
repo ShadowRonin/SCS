@@ -92,3 +92,31 @@ void SpaceObject::rotate(float yaw, float pitch, float roll)
 	//TODO
 	//objectRotation = objectRotation * toQuat(yaw, pitch, roll);
 }
+
+
+/*************************************************************************************************************************************
+ * findTargetBearing - returns bearing (Euler angles) of target space object
+ *
+ * VRM      Date      By    Description
+ * ===   ==========   ===   ==========================================================================================================
+ * 100   05/09/2014   BSW   initial coding
+ *************************************************************************************************************************************/
+bearing3D SpaceObject::findTargetBearing(cords3D targetPosition)
+{
+	// local variables
+	bearing3D returnValue;
+
+	// process
+	returnValue.yaw = 0;				// initialize return variable
+	returnValue.pitch = 0;
+	returnValue.roll = 0;
+
+	Matrix<float> vector = new Matrix<float>(object.toLocal(targetPostion[0], object.toLocal(targetPostion[1], object.toLocal(targetPostion[2]);
+
+	Quaternion angle = new Quaternion();
+
+	angle.setFromTwoVectors(new Matrix<float>(0,0,0), vector);
+
+//	return toEuler(angle);
+	return returnValue;
+}
