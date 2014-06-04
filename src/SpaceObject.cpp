@@ -16,6 +16,8 @@
 #include "SpaceObject.h"
 
 //3rd party header files
+using namespace Eigen;
+
 
 /*************************************************************************************************************************************
  * constructor
@@ -113,10 +115,14 @@ bearing3D SpaceObject::findTargetBearing(cords3D targetPosition)
 
 	Matrix<float> vector = new Matrix<float>(object.toLocal(targetPostion[0], object.toLocal(targetPostion[1], object.toLocal(targetPostion[2]);
 
-	Quaternion angle = new Quaternion();
+	Quaternionf angle = new Quaternionf();
 
 	angle.setFromTwoVectors(new Matrix<float>(0,0,0), vector);
 
-//	return toEuler(angle);
-	return returnValue;
+	return toEuler(angle);
+//	return returnValue;
+}
+
+cords3D toLocal(cords3D loc)  {
+    return objectFacing._transformVector(loc);
 }

@@ -19,8 +19,9 @@
 // standard header files
 
 // 3rd party header files
-#include <Geometry>
 using namespace Eigen;
+#include <Geometry>
+
 
 // project header files
 #include "common.h"

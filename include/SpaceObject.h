@@ -17,6 +17,10 @@
 // project header files
 #include "common.h"						// definitions shared by entire project
 
+//3rd party files
+using namespace Eigen;
+#include <Geometry>
+
 /***************************************************************************************************************
  * symbolic definitions
  ***************************************************************************************************************/
@@ -40,7 +44,7 @@ class SpaceObject
 		void applyForce(vector3D);		// adjusts V based on the force given
 	private:
 		// private data members
-		vector3D objectFacing;			// facing (unit vector) of object in 3D using global FoR
+		Quaternionf objectFacing;		// facing
 		vector3D objectOrientation;		// orientation (unit vector) of object in 3D using global FoR
 		cords3D objectPosition;			// position of object in 3D space using global FoR
 		float objectMass;				// mass of object
@@ -52,6 +56,8 @@ class SpaceObject
 		bearing3D getHeadingB();		// get heading stated as degrees off x and y planes
 		vector3D getVelocityG();		// get velocity in global FoR
 		vector3D getVelocityL();		// get velocity in local FoR
-		void rotate(float, float, float);	// ?
+		void rotate(float, float, float);	// rotates the ship by the given euler angles
+		cords3d toLocal(cords3D);		//converts the given cords to the lfor
+		cords3D toGlobal(cords3D);		//converts the given cords to the gfor
 };
 
